@@ -97,6 +97,7 @@ ul {
     font-weight: 700;
     background: linear-gradient(90deg, #fff, var(--text-muted));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -162,6 +163,7 @@ ul {
     margin-bottom: 15px;
     background: linear-gradient(90deg, #fff, #b9cbe6);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -181,7 +183,8 @@ ul {
 
 .availability {
     font-size: 0.9rem !important;
-    color: var(--accent-color) !important;
+    color: #2ecc71 !important;
+    /* Green */
     font-weight: 600;
     margin-bottom: 30px !important;
 }
