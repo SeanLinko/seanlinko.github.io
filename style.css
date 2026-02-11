@@ -30,7 +30,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     font-weight: 700;
     color: #fff;
@@ -135,8 +138,9 @@ ul {
     justify-content: space-between;
     padding: 0 10%;
     background: radial-gradient(circle at top right, rgba(67, 97, 238, 0.1), transparent 40%),
-                radial-gradient(circle at bottom left, rgba(76, 201, 240, 0.1), transparent 40%);
-    margin-top: 60px; /* Offset for fixed navbar */
+        radial-gradient(circle at bottom left, rgba(76, 201, 240, 0.1), transparent 40%);
+    margin-top: 60px;
+    /* Offset for fixed navbar */
 }
 
 .hero-content {
@@ -219,20 +223,41 @@ ul {
     color: var(--primary-color);
 }
 
-.abstract-shape {
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+/* Hero Image */
+.hero-visual {
+    position: relative;
+    max-width: 450px;
+}
+
+.img-container {
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.2;
+    overflow: hidden;
+    border: 4px solid rgba(67, 97, 238, 0.3);
+    box-shadow: 0 0 50px rgba(67, 97, 238, 0.2);
     animation: float 6s ease-in-out infinite;
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* About Section */
@@ -280,6 +305,13 @@ ul {
     border-color: var(--primary-color);
 }
 
+.edu-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+}
+
 .education-card i {
     font-size: 3rem;
     color: var(--primary-color);
@@ -305,7 +337,8 @@ ul {
 /* Experience Section */
 .experience {
     padding: 100px 0;
-    background: #0f131f; /* Slightly lighter bg */
+    background: #0f131f;
+    /* Slightly lighter bg */
 }
 
 .timeline {
@@ -370,6 +403,24 @@ ul {
     transform: translateY(-3px);
 }
 
+.company-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+    /* Slight rounding */
+    background: #fff;
+    /* White bg for logos if transparent */
+    padding: 2px;
+}
+
 .timeline-date {
     position: absolute;
     top: 15px;
@@ -392,14 +443,20 @@ ul {
 
 .timeline-content h3 {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    /* reduced */
 }
 
 .timeline-content h4 {
     font-size: 0.9rem;
     color: var(--text-muted);
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+    /* reduced since it's in flex container */
+}
+
+.timeline-content ul {
+    margin-top: 15px;
 }
 
 .timeline-content ul li {
@@ -432,23 +489,37 @@ ul {
 .project-card {
     background: var(--card-bg);
     border-radius: 15px;
-    padding: 30px;
     border: 1px solid var(--border-color);
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-icon {
     font-size: 2.5rem;
     color: var(--secondary-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .project-card h3 {
@@ -625,14 +696,14 @@ footer {
     .availability {
         justify-content: center;
     }
-    
+
     .cta-buttons {
         justify-content: center;
     }
 
-    .abstract-shape {
-        width: 300px;
-        height: 300px;
+    .img-container {
+        width: 280px;
+        height: 280px;
     }
 
     .about-grid {
@@ -656,7 +727,7 @@ footer {
     .timeline-item::after {
         left: 21px;
     }
-    
+
     .timeline-item:nth-child(even)::after {
         left: 21px;
     }
