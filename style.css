@@ -553,7 +553,7 @@ ul {
 }
 
 .project-major .role {
-    color: #2ecc71;
+    color: #2ecc71 !important;
     /* Green to match Hero availability */
     font-size: 1.1rem;
     margin-bottom: 20px;
@@ -644,7 +644,7 @@ ul {
 }
 
 .contact-content {
-    max-width: 800px;
+    max-width: 1000px;
     /* Increased to ensure text fits on one line */
     margin: 0 auto;
 }
