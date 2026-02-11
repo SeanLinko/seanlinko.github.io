@@ -751,7 +751,10 @@ footer {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        margin-top: 0;
+        margin-top: 80px;
+        /* Increased to prevent navbar overlap */
+        height: auto;
+        padding: 40px 10%;
     }
 
     .hero-content {
