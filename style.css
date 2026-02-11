@@ -484,9 +484,10 @@ ul {
 }
 
 .projects-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Side-by-side on larger screens */
+    gap: 40px;
 }
 
 .project-major {
@@ -495,6 +496,8 @@ ul {
     border: 1px solid var(--border-color);
     overflow: hidden;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-major:hover {
@@ -508,17 +511,24 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    /* Reduced padding */
     border-bottom: 1px solid var(--border-color);
+    height: 300px;
+    /* Fixed height for consistency */
 }
 
 .project-img-large {
     max-width: 100%;
+    max-height: 100%;
+    /* Fit within container */
+    width: auto;
     height: auto;
-    max-height: 600px;
     display: block;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+    /* Ensure full image is visible */
 }
 
 .project-details {
