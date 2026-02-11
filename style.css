@@ -498,6 +498,9 @@ ul {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    max-width: 500px;
+    /* Constrain width */
+    width: 100%;
 }
 
 .project-major:hover {
@@ -505,10 +508,7 @@ ul {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-.project-major:hover {
-    border-color: var(--primary-color);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
+/* Duplicate hover removed */
 
 .project-visual {
     width: 100%;
@@ -518,7 +518,8 @@ ul {
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid var(--border-color);
-    height: 300px;
+    height: 250px;
+    /* Reduced height */
     position: relative;
 }
 
