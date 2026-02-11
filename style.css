@@ -488,6 +488,8 @@ ul {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     /* Side-by-side on larger screens */
     gap: 40px;
+    justify-items: center;
+    /* Center cards in grid cells */
 }
 
 .project-major {
@@ -518,16 +520,17 @@ ul {
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid var(--border-color);
-    height: 250px;
-    /* Reduced height */
+    height: 200px;
+    /* Reduced to fix sizing */
     position: relative;
 }
 
 .wavelogic-placeholder {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-    /* Distinctive gradient */
+    background: #000;
+    /* Black background per request */
+    /* Gradient removed */
     display: flex;
     justify-content: center;
     align-items: center;
