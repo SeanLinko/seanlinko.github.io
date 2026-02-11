@@ -484,10 +484,29 @@ ul {
 }
 
 .projects-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Side-by-side on larger screens */
+    display: flex;
+    overflow-x: auto;
     gap: 40px;
+    padding-bottom: 20px;
+    /* Space for scrollbar */
+    scroll-snap-type: x mandatory;
+}
+
+.projects-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-wrapper::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+.projects-wrapper::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+.projects-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
 }
 
 .project-major {
@@ -498,6 +517,18 @@ ul {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    min-width: 300px;
+    /* Mobile minimum */
+    flex: 0 0 auto;
+    /* Prevent shrinking */
+    scroll-snap-align: center;
+}
+
+@media (min-width: 768px) {
+    .project-major {
+        min-width: 600px;
+        /* Desktop width */
+    }
 }
 
 .project-major:hover {
@@ -512,10 +543,24 @@ ul {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    /* Reduced padding */
     border-bottom: 1px solid var(--border-color);
     height: 300px;
-    /* Fixed height for consistency */
+    position: relative;
+}
+
+.wavelogic-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    /* Distinctive gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .project-img-large {
