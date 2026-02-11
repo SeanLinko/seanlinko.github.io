@@ -535,11 +535,8 @@ ul {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 3.5rem;
-    /* Significantly larger text */
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 5rem;
+    /* Large icon per request */
 }
 
 .project-img-large {
