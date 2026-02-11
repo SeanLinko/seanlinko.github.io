@@ -47,7 +47,7 @@
                 <p class="availability"><i class="fas fa-calendar-check"></i> Available for Full-Time Work: May 2026</p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn primary">Get in Touch</a>
-                    <a href="#projects" class="btn secondary">View Work</a>
+                    <a href="#experience" class="btn secondary">View Work</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -160,15 +160,21 @@
         <section id="projects" class="projects">
             <div class="container">
                 <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="assets/Pinball_Machine.jpeg" alt="Pinball Machine" class="project-img">
-                        <div class="project-content">
-                            <div class="project-icon"><i class="fas fa-gamepad"></i></div>
-                            <h3>Pinball Machine</h3>
+                <div class="projects-wrapper">
+                    <!-- Pinball Machine -->
+                    <div class="project-major">
+                        <div class="project-visual">
+                            <img src="assets/Pinball_Machine.jpeg" alt="Pinball Machine" class="project-img-large">
+                        </div>
+                        <div class="project-details">
+                            <div class="project-header">
+                                <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                                <h3>Pinball Machine</h3>
+                            </div>
                             <p class="role">Mechatronics | Dec 2025</p>
                             <p>Programmed an ATMEGA328P to control solenoids, flippers, and scoreboard. Utilized Timer,
-                                SPI, and USART registers for interrupts and PWM signals.</p>
+                                SPI, and USART registers for interrupts and PWM signals. This project involved complex
+                                state machine logic to handle the game rules and hardware interfacing.</p>
                             <div class="tags">
                                 <span>C++</span>
                                 <span>Embedded</span>
@@ -177,34 +183,29 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <img src="assets/Basic_Fitness_App.png" alt="Fitness App" class="project-img">
-                        <div class="project-content">
-                            <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
-                            <h3>Fitness App</h3>
+                    <!-- Fitness App -->
+                    <div class="project-major">
+                        <div class="project-visual">
+                            <img src="assets/Basic_Fitness_App.png" alt="Fitness App" class="project-img-large">
+                        </div>
+                        <div class="project-details">
+                            <div class="project-header">
+                                <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <h3>Fitness App</h3>
+                            </div>
                             <p class="role">Software Engineering | May 2024</p>
-                            <p>Created an Android app to track caloric/protein intake and workout progress, visualizing
-                                trained muscles via a color-coded diagram.</p>
+                            <p>Created an Android app to track caloric/protein intake and workout progress. The
+                                application features a dynamic color-coded muscle diagram that visualizes trained muscle
+                                groups based on workout history.</p>
                             <div class="tags">
                                 <span>Android Studio</span>
                                 <span>Java/Kotlin</span>
                                 <span>Mobile</span>
                             </div>
                         </div>
-
-                        <div class="project-card">
-                            <div class="project-icon"><i class="fas fa-robot"></i></div>
-                            <h3>Autonomous Robot</h3>
-                            <p class="role">Design Thinking | Apr 2022</p>
-                            <p>Designed a robot to navigate a warehouse, locate boxes via barcode scanner, and transport
-                                them to a drop-off zone.</p>
-                            <div class="tags">
-                                <span>Robotics</span>
-                                <span>Automation</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- Skills Section -->
