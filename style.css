@@ -483,63 +483,77 @@ ul {
     background: var(--bg-color);
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    background: var(--card-bg);
-    border-radius: 15px;
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
+.projects-wrapper {
     display: flex;
     flex-direction: column;
+    gap: 80px;
+}
+
+.project-major {
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
     overflow: hidden;
+    transition: var(--transition);
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
+.project-major:hover {
     border-color: var(--primary-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-.project-img {
+.project-visual {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     border-bottom: 1px solid var(--border-color);
 }
 
-.project-content {
-    padding: 30px;
+.project-img-large {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-details {
+    padding: 40px;
+}
+
+.project-header {
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.project-icon {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-}
-
-.project-card h3 {
+    align-items: center;
+    gap: 15px;
     margin-bottom: 10px;
 }
 
-.project-card .role {
+.project-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.project-major h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.project-major .role {
     color: var(--accent-color);
-    font-size: 0.9rem;
-    margin-bottom: 15px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
     font-weight: 600;
 }
 
-.project-card p {
+.project-major p {
     color: var(--text-muted);
-    margin-bottom: 20px;
-    flex-grow: 1;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 800px;
 }
 
 .tags {
@@ -555,6 +569,21 @@ ul {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
+}
+
+/* Responsive adjustment for projects */
+@media (max-width: 768px) {
+    .project-details {
+        padding: 25px;
+    }
+
+    .project-major h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-img-large {
+        max-height: 400px;
+    }
 }
 
 /* Skills Section */
