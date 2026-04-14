@@ -529,14 +529,16 @@ ul {
     width: 100%;
     height: 100%;
     background: #000;
-    /* Black background per request */
-    /* Gradient removed */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 5rem;
-    /* Large icon per request */
+    overflow: hidden;
+}
+
+.wavelogic-placeholder img {
+    height: 80%;
+    /* Ensure the antenna is nice and large */
+    width: auto;
 }
 
 .project-img-large {
